@@ -69,6 +69,18 @@
                     <div id="logoLink">
                         <img style="height: 60px;" src="images/tractor_logo.gif" alt="">
                     </div>
+                    <script>
+                        document.addEventListener("DOMContentLoaded", function () {
+                            const mylogo = document.getElementById("logoLink");
+                            const audio = document.getElementById("logoSound");
+
+                            mylogo.addEventListener("click", function (event) {
+                                event.preventDefault();
+                                audio.currentTime = 0;
+                                audio.play();
+                            });
+                        });
+                    </script>
                     <!-- Logo Start -->
                     <a class="navbar-brand" href="index.html"
                         style="color: #fff;display: flex;justify-content: center;align-items: center;gap: 10px;">
